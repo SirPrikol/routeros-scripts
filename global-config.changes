@@ -1,6 +1,10 @@
 # RouterOS global-config changes
 # Copyright (c) 2019-2020 Christian Hesse <mail@eworm.de>
 
+# TODO: Remove on 2021-09-30
+:global CertificateAvailable
+$CertificateAvailable "Let's Encrypt Authority X3";
+
 # Changes for global-config to be added to notification on script-updates
 :global GlobalConfigChanges {
   1="moved variables from 'global-config' to 'global-functions' for independence";
@@ -15,4 +19,5 @@
   10="make health threshold for voltage configurable";
   11="introduced function '\$ScriptInstallUpdate' to install new and update existing scripts";
   12="removed '\$ScriptUpdatesConfigChangesIgnore', comment '\$GlobalConfigVersion' in 'global-config-overlay' to disable change notifications";
+  13="updated Let's Encrypt trust chain";
 };
